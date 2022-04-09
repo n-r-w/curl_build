@@ -65,9 +65,11 @@ cd %current_dir%
 md %curl_bin_path%
 xcopy /S /E /Y /Q curl\builds\libcurl-vc-x64-debug-dll-ssl-dll-zlib-dll-ipv6-sspi\ %curl_bin_path%\debug\
 
-rename %current_dir%\%curl_bin_path%\debug\bin\libcurl_debug.dll libcurl.dll
-rename %current_dir%\%curl_bin_path%\debug\lib\libcurl_debug.exp libcurl.exp
-rename %current_dir%\%curl_bin_path%\debug\lib\libcurl_debug.lib libcurl.lib
-rename %current_dir%\%curl_bin_path%\debug\lib\libcurl_debug.pdb libcurl.pdb
+rename %current_dir%\%zlib_bin_path%\debug\bin\zlib.dll zlibd.dll
+rename %current_dir%\%zlib_bin_path%\debug\lib\zlib.lib zlibd.lib
+rename %current_dir%\%zlib_bin_path%\debug\lib\zlibstatic.lib zlibstaticd.lib
 
 cd %current_dir%
+
+rmdir /S /Q zlib
+rmdir /S /Q curl
