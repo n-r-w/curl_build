@@ -1,5 +1,4 @@
 echo off
-chcp 1251
 SetLocal EnableDelayedExpansion
 
 rem MSVC env path:
